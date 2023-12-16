@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+    <title>Mobile App In Networking</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <div class="toggle" onclick="history.back()">
+                <img src="/back.png" style="width:25px;height:25px;"/>
+                </div>
+            <a class="navbar-brand" href="index.html">Mobile App In Networking</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="Lessons.html">Lessons <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="topic1.html">Lesson 1</a></li>
+                  <li><a href="topic2.html">Lesson 2</a></li>
+                  <li><a href="topic3.html">Lesson 3</a></li>
+                  <li><a href="topic4.html">Lesson 4</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="Video.html">Video Tutorials <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="vid1.html">Video Tutorial 1</a></li>
+                  <li><a href="vid2.html">Video Tutorial 2</a></li>
+                  <li><a href="vid3.html">Video Tutorial 3</a></li>
+                </ul>
+              <li><a href="dot.html">Definition of Terms</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+    <div class="container">
+        <h1 style="text-align:center;">Network Fundamentals</h1>
+    </div>
+    <div class="container">
+        <p><strong>What is Netwroking?</strong></p>
+        <ul type="disc">
+            <li>A computer network is a collection of computers and other hardware interconnected by communication channels that allow sharing of resources and information.</li>
+            <li>More than one computer interconnected through a communication medium for information interchange is called a computer network.</li>
+            <li>A network consists of two or more computers that are linked in order to share resources(such as printers and CD-ROMS), exchange files, or allow electronic communications.</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>History of Networking</strong></p>
+        <ul type="disc">
+            <li>The first network was the ARPANET developed by the U.S Department of Defense.</li>
+            <li>A network is a group of devices connected to each other.</li>
+            <li>If at least one process in one device is able to send/receive data to/from another device, then the two devices are said to be in a network.</li>
+            <li>Networking emerged because of two main reasons:</li>
+            <ol>
+                <li>Need for data communications</li>
+                <li>High cost of Hardware</li>
+            </ol>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>Types of Networking</strong></p>
+        <ul type="disc">
+            <li>Depending on one's perspective, we can clasify networks in different ways</li>
+            <br>
+            <li>Computer networks can be categorized by:</li>
+            <ol>
+                <li>Transmission Media (Wired & Wireless)</li>
+                <li>Range (Personal Area Network, Local Area Network, Metropolitan Area Network, Wide Area Network)</li>
+                <li>Functional Relationship (Peer to Peer(P2P), Client-Server)</li>
+                <li>Topology (Bus, Ring, Star)</li>
+            </ol>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>Networking Hardware/Devices</strong></p>
+        <li>Networking Hardware are devices that amplify and connect the transmission media on the network.</li>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>Several networking Hardware/Devices</strong></p>
+        <ul type="disc">
+            <li>Network Interface Card(NIC)/ Local Area Network Card (LAN Card)</li>
+            <li>Repeater</li>
+            <li>Hub</li>
+            <li>Switch</li>
+            <li>Router</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>Transmission Media</strong></p>
+        <li>Transmission Media are the Physical Path or Atmospheric Paths that signals follow</li>
+        <li>They are usually classified into two categories:</li>
+        <ol type="disc">
+            <li>Guided/Wired</li>
+            <li>Unguided/Wireless</li>
+        </ol>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>Guided/Wired Network Media</strong></p>
+        <ul type="disc">
+            <li>Coaxial Cabel</li>
+            <li>Twisted Pair Cable</li>
+            <li>Fiber Optic Cable</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>Unguided/Wireless Network Media</strong></p>
+        <ul type="disc">
+            <li>Infrared</li>
+            <li>Bluetooth</li>
+            <li>Radio</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>IP Addressing</strong></p>
+        <li>An Ip Address is assigned to every computer on an Ethernet network.</li>
+        <li>Like the street address for your home, an IP address identifies network computers.</li>
+        <li>An IP address is for formatted as a series of four values separated by periods: 192.168.0.1</li>
+        <li>Each Value ranges from 0 through 255.</li>
+    </div>
+    <br>
+    <div class="container">
+        <h1 style="text-align:center;">Types of Computer Networks</h1>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>What is Network?</strong></p>
+        <li>A network is consists of two or more computers that are linked in order to share resources(such as printers and CDs), exchange files, or allow electronic communications.</li>
+        <li>The computer on a network may be linked through cables, telephone lines, radio waves, satellites, or infrared light beams.</li>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>Diiferent Types of Networks</strong></p>
+        <li>Depending upon the geographical area covered by a network, it is classified as:</li>
+        <ul type="disc">
+            <li>Local Area Network(LAN)</li>
+            <li>Metropolitan Area Network(MAN)</li>
+            <li>Wide Area Network(WAN)</li>
+            <li>Personal Area Network(PAN)</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <p><strong>Local Area Network(LAN)</strong></p>
+        <li>A LAN connects only one building or neighborhood with other buildings or neighborhoods in that same area.</li>
+        <li>A LAN is a network that enables sharing of resources such as files or hardware devices that may be needed by multiple users.</li>
+        <li>Limited in size, typically spanning a few hundred meters, and no more than a mile.</li>
+        <li>Is fast, with speeds from 10 mbps to 10gbps.</li>
+        <li>Requires littel wiring, typically a single cable connecting to each device.</li>
+        <li>LAN's can be either wired or wireless. Twisted Pair, coax or fiber optic cable can be used in wired LAN's.</li>
+        <li>Every LAN uses a protocol-a set of rules that governs how packets are configured and transmitted.</li>
+        <li>Nodes in a LAN are linked together with a certain topology. These topologies include:
+            <ul type="disc">
+                <li>Bus Topology</li>
+                <li>Star Topology</li>
+                <li>Ring Topology</li>
+            </ul>
+        </li>
+    </div>
+    <br>
+    <div class="container">
+        <h2>Advantages and Disadvantages of LAN</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Speed</td>
+                <td>Expensive to Install</td>
+                </tr>
+                <tr>
+                    <td>Cost</td>
+                    <td>Requires Administrative Time</td>
+                </tr>
+                <tr>
+                    <td>Security</td>
+                    <td>File Server May Fail</td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td>Cables May Break</td>
+                </tr>
+                <tr>
+                    <td>Resource Sharing</td>
+                    <td>Limited Distance</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</br>
+</br></br></br></br>
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2023 PHILIPPINE COLLEGE OF NORTHWESTERN LUZON (BSIT-III). All rights reserved.</p>
+      </footer>
+
+      <button class="back-to-top" onclick="scrollToTop()"><img src="/pngegg(11).png" width="25px" alt="Back to Top"></button>
+</body>
+</html>

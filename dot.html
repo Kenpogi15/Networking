@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Mobile App in Networking</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('pics/networking.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  #scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color:black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 35px;
+    right: 10px;
+    z-index: 99;
+    font-size: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+      
+      .subheader {
+        margin-top: 90px;
+        width: 90%;
+        margin: 0 auto 1rem;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+      .subheader #searchBox{
+        height: 40px;
+        width: 100%;
+        background: #f3f3fd;
+        display: flex;
+        flex-direction: row;
+        border-radius: 70px;
+        overflow: hidden;
+        border: 2px solid black;
+    }
+    .subheader #searchBox input[type="text"]{
+        height: 100%;
+        width: 90%;
+        padding: 0 15px;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #000;
+        font-size: 12px;
+    }
+    .subheader #searchBox input[type="text"]::placeholder{
+        color: #000;
+    }
+    
+    #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+    #myUL li a {
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: -15px;
+    font-style: bold;
+    background-color: rgb(0, 0, 0);
+    padding: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block
+    
+    
+    }
+    
+    #myUL li a:hover:not(.header) {
+    
+    background-color: rgb(0, 132, 194);
+    }
+    
+    .dropbtn {
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      }
+      .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      }
+    
+      .dropdown-content {
+      padding: 10px;
+      display: none;
+      position: absolute;
+      background-color: rgb(12, 124, 177);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      }
+    
+      .dropdown:hover .dropdown-content {
+      display: block;
+      }
+      .dropdown:hover .dropbtn {
+      background-color: rgb(255, 255, 255);
+      }
+    
+      @media (min-height: 600px){
+          .subheader{
+              margin-top: 10px;
+          }
+          .container{
+              margin-top: 10px;
+              }
+      }
+      @media (min-height: 700px){
+          .subheader{
+              margin-top: 20px;
+          }
+          .container{
+              margin-top: 20px;
+              }
+      }
+      @media (min-height: 800px){
+          .subheader{
+              margin-top: 20px;
+          }
+          .container{
+              margin-top: 10px;
+              }
+      }
+      @media (min-height: 900px){
+          .subheader{
+              margin-top: 20px;
+          }
+          .container{
+              margin-top: 10px;
+              }
+      }
+
+  .toggle {
+  position: relative;
+  width: 45px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px;
+}
+.navbar-brand {
+  position: fixed;
+  top: -5px;
+  left: 8px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <div class="toggle" onclick="history.back()">
+                <img src="/back.png" style="width:25px;height:25px;"/>
+                </div>
+              <a class="navbar-brand" href="index.html">Mobile App In Networking</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="Lessons.html">Lessons <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="topic1.html">Lesson 1</a></li>
+                    <li><a href="topic2.html">Lesson 2</a></li>
+                    <li><a href="topic3.html">Lesson 3</a></li>
+                    <li><a href="topic4.html">Lesson 4</a></li>
+
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="Video.html">Video Tutorials <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="vid1.html">Video Tutorial 1</a></li>
+                    <li><a href="vid2.html">Video Tutorial 2</a></li>
+                    <li><a href="vid3.html">Video Tutorial 3</a></li>
+                  </ul>
+                <li><a href="dot.html">Definition of Terms</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </div>
+          </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+
+    <section class="services adjust" id="services">
+        <div class="content">				
+        <div class="nodecor">
+
+            <div class="subheader">
+                <div id="searchBox">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." title="Type in a name">
+                </div>
+            </div>
+
+
+          <h1 style="font-size: 30px; color: Black;" >DEFINITION OF TERMS</h1><br>
+        
+
+
+                <ul id="myUL">
+                    <div class="dropdown">
+                        <li><button class="dropbtn"><a>Networking</a></button>
+                          <div class="dropdown-content">
+                            <p>
+                              A computer network is a collection of computers and other hardware interconnected by communication channels that allow sharing of resources and information.
+                            </p>
+                          </div>
+                        </li>
+                      </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>Network</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          A network is consists of two or more computers that are linked in order to share resources(such as printers and CDs), exchange files, or allow electronic communications.
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>LAN</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          A LAN connects only one building or neighborhood with other buildings or neighborhoods in that same area.
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>NIC Card</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          Provides the physical interface between computer and cabling.
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>Hubs</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          It is commonly used LAN connectivity devices. It serves as the central connection points for LANs.
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>Switch</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          Appears nearly identical to network hubs, but a switch contains more intelligence (and aslightly higher price tag) than a network hub.
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>Modem</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          Links your home network to the internet through your Internet Service Provider(ISP).
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>Routers</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          Are highly intelligent devices that connect multiple network types and determine the best path for sending data.
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>Twisted Pair Cable</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          If the pair of wires are not twisted, electromagnetic noises from, e.g., motors, will affect the closer wire more than the further one, thereby causing errors.
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>Unshielded Twisted-Pair(UTP)</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          Typically wrapped inside a plastic cover(for mechanical protection). A sample UTP cable with 5 unshielded twsited pairs of wires.
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                  <div class="dropdown">
+                    <li><button class="dropbtn"><a>IP ADDRESSING</a></button>
+                      <div class="dropdown-content">
+                        <p>
+                          An Ip Address is assigned to every computer on an Ethernet network. 
+                        </p>
+                      </div>
+                    </li>
+                  </div >
+                 
+
+
+                </br>
+              </br></br></br></br>
+
+
+                  <footer>
+                    <p>&copy; 2023 PHILIPPINE COLLEGE OF NORTHWESTERN LUZON (BSIT-III). All rights reserved.</p>
+                  </footer>
+
+
+
+
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+        
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
